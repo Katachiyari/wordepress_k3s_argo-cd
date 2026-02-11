@@ -1,0 +1,22 @@
+mariadb:
+  enabled: false
+
+externalDatabase:
+  host: 10.20.71.10
+  port: 3306
+  user: wp_user
+  password: "wp_db"
+  database: wordpress
+  #existingSecret: "wp-db" # si tu veux passer par un secret, clé: mariadb-password
+
+service:
+  type: ClusterIP
+
+persistence:
+  enabled: true
+  existingClaim: wp-pvc
+
+ingress:
+  enabled: true
+  ingressClassName: traefik
+  hostname: wp-lab.local
