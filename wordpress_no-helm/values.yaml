@@ -1,6 +1,8 @@
 mariadb:
   enabled: false
 
+fullnameOverride: wordpress
+
 externalDatabase:
   host: 10.20.71.10
   port: 3306
